@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "0565aaf9-2f0a-448e-ae35-4ea3a1019250",
+		"name": "scannable Pass Project",
+		"description": "An api documentation which were used in the assigment.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33052532",
+		"_collection_link": "https://bold-eclipse-431134.postman.co/workspace/My-Workspace~c77f119d-de4d-4ff0-81ea-34eb2fe48582/collection/33052532-0565aaf9-2f0a-448e-ae35-4ea3a1019250?action=share&source=collection_link&creator=33052532"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"ziyang@example.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5001/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ziyang D2\",\r\n  \"email\": \"ziyang2@example.com\",\r\n  \"password\": \"123456\",\r\n  \"university\": \"University of Sydney\",\r\n  \"address\": \"123 King Street, Sydney NSW 2000\",\r\n  \"role\": \"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/auth/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/edit-users/68dfb808d79d083ef7dc0d17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"edit-users",
+								"68dfb808d79d083ef7dc0d17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/auth/delete-users/68dfb808d79d083ef7dc0d1768dfb808d79d083ef7dc0d17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"delete-users",
+								"68dfb808d79d083ef7dc0d1768dfb808d79d083ef7dc0d17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Qr Code",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/auth/qrcode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"qrcode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "post event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTAxZTM0ZDY1Mzk0MTJkZTIwMzNjZSIsImlhdCI6MTc1NTM1MDU3OSwiZXhwIjoxNzU3OTQyNTc5fQ.2ko3egpez0QCvIblVjljxyAs674b7C85tVJuUwYN-94",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Summer Beats Festival 2\",\r\n  \"description\": \"A lively outdoor music festival featuring top DJs and live bands.\",\r\n  \"location\": \"Central Park, New York\",\r\n  \"date\": \"2025-09-15\",\r\n  \"time\": \"18:00\",\r\n  \"category\": \"Concert\",\r\n  \"image\": \"https://example.com/images/summer-beats.jpg\",\r\n  \"availableSeats\": 600,\r\n  \"seatsFilled\": 120\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5001/api/event/createEvent",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"createEvent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/event/getById/68df5419cbdc48e0ec2751df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"getById",
+								"68df5419cbdc48e0ec2751df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Summer Beats Festival 2\",\r\n  \"description\": \"A lively outdoor music festival featuring top DJs and live bands.\",\r\n  \"location\": \"Central Park, New York\",\r\n  \"date\": \"2025-09-15\",\r\n  \"time\": \"18:00\",\r\n  \"category\": \"Concert\",\r\n  \"image\": \"https://example.com/images/summer-beats.jpg\",\r\n  \"availableSeats\": 500,\r\n  \"seatsFilled\": 120\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/event/edit-event/68df6473e3de394a18f2e08b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"edit-event",
+								"68df6473e3de394a18f2e08b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/event/delete-event/68df6473e3de394a18f2e08b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"delete-event",
+								"68df6473e3de394a18f2e08b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request for Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/event/register-for/68df5419cbdc48e0ec2751df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"register-for",
+								"68df5419cbdc48e0ec2751df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark Attendance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/event/attendance?userId=68dfb751d79d083ef7dc0d12&eventId=68df5419cbdc48e0ec2751df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"attendance"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "68dfb751d79d083ef7dc0d12"
+								},
+								{
+									"key": "eventId",
+									"value": "68df5419cbdc48e0ec2751df"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Attendance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZGZiNzUxZDc5ZDA4M2VmN2RjMGQxMiIsImlhdCI6MTc1OTQ5MTk2OCwiZXhwIjoxNzYyMDgzOTY4fQ.ZKoyWh_eN5HpHaFJGxrWXS6de3UIv3G0mtjr0e2nHBM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/event/attendance/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"attendance",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event Attendance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/event/68dfb751d79d083ef7dc0d12/attendance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"68dfb751d79d083ef7dc0d12",
+								"attendance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5001/api/event/getAllEvents",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"event",
+								"getAllEvents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
